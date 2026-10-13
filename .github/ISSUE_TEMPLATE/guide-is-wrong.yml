@@ -1,0 +1,33 @@
+name: A guide is wrong
+description: Report a guide that is out of date, unclear or incorrect.
+title: "Wrong guide: "
+labels: ["fix"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for letting us know. If you already know the fix, a pull request is very welcome too.
+  - type: input
+    id: guide
+    attributes:
+      label: Which guide?
+      description: The file path or the title shown in the panel.
+      placeholder: rust/admin.md
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong?
+      description: The step that did not work, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: fix
+    attributes:
+      label: What should it say?
+      description: Optional. The correct steps or command, if you know them.
+  - type: input
+    id: version
+    attributes:
+      label: Game version or egg
+      placeholder: Paper 1.21.4, Rust with Carbon...

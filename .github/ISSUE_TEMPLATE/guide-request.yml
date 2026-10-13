@@ -1,0 +1,28 @@
+name: Guide request
+description: Ask for a guide that does not exist yet.
+title: "Guide request: "
+labels: ["guide request"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for asking. Tell us what you are trying to do and someone may write it up.
+  - type: input
+    id: game
+    attributes:
+      label: Game
+      placeholder: Rust, Minecraft, Valheim...
+    validations:
+      required: true
+  - type: input
+    id: egg
+    attributes:
+      label: Egg and framework
+      description: The egg name shown in the panel, and the mod framework if any.
+      placeholder: Rust with Oxide, Paper...
+  - type: textarea
+    id: topic
+    attributes:
+      label: What should the guide explain?
+      placeholder: How to set up a custom map, how to back up the world...
+    validations:
+      required: true
